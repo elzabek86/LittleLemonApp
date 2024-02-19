@@ -44,6 +44,8 @@ struct Onboarding: View {
                         
                     }
                 }
+                .background(.red)
+                
             }
             .onAppear() {
                 if UserDefaults.standard.bool(forKey: kIsLoggedIn) {
