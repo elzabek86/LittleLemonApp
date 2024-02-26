@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF3FB2D42B86BABE003F7DB3 /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3FB2D32B86BABE003F7DB3 /* FetchedObjects.swift */; };
+		EF3FB2D62B86BAC2003F7DB3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3FB2D52B86BAC2003F7DB3 /* Persistence.swift */; };
+		EF3FB2D82B86BB66003F7DB3 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3FB2D72B86BB66003F7DB3 /* MenuList.swift */; };
+		EF3FB2DA2B86BB70003F7DB3 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3FB2D92B86BB70003F7DB3 /* MenuItem.swift */; };
+		EF3FB2DD2B87F129003F7DB3 /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF3FB2DB2B87F129003F7DB3 /* ExampleDatabase.xcdatamodeld */; };
 		EF63334C2B8406CD0006174A /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63334B2B8406CD0006174A /* UserProfile.swift */; };
 		EF6500A02B61C5A0005FADF5 /* LittleLemonAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65009F2B61C5A0005FADF5 /* LittleLemonAppApp.swift */; };
 		EF6500A42B61C5A2005FADF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6500A32B61C5A2005FADF5 /* Assets.xcassets */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF3FB2D32B86BABE003F7DB3 /* FetchedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
+		EF3FB2D52B86BAC2003F7DB3 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		EF3FB2D72B86BB66003F7DB3 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
+		EF3FB2D92B86BB70003F7DB3 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		EF3FB2DC2B87F129003F7DB3 /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
 		EF63334B2B8406CD0006174A /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		EF65009C2B61C5A0005FADF5 /* LittleLemonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleLemonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF65009F2B61C5A0005FADF5 /* LittleLemonAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonAppApp.swift; sourceTree = "<group>"; };
@@ -62,6 +72,11 @@
 				EFE1F73E2B7FE58F003008CF /* Onboarding.swift */,
 				EF63334B2B8406CD0006174A /* UserProfile.swift */,
 				EF65009F2B61C5A0005FADF5 /* LittleLemonAppApp.swift */,
+				EF3FB2D72B86BB66003F7DB3 /* MenuList.swift */,
+				EF3FB2D92B86BB70003F7DB3 /* MenuItem.swift */,
+				EF3FB2D32B86BABE003F7DB3 /* FetchedObjects.swift */,
+				EF3FB2D52B86BAC2003F7DB3 /* Persistence.swift */,
+				EF3FB2DB2B87F129003F7DB3 /* ExampleDatabase.xcdatamodeld */,
 				EF6500A32B61C5A2005FADF5 /* Assets.xcassets */,
 				EF6500A52B61C5A2005FADF5 /* Preview Content */,
 			);
@@ -148,7 +163,12 @@
 			files = (
 				EFE1F7412B7FE59C003008CF /* Menu.swift in Sources */,
 				EFE1F73F2B7FE58F003008CF /* Onboarding.swift in Sources */,
+				EF3FB2D82B86BB66003F7DB3 /* MenuList.swift in Sources */,
+				EF3FB2D42B86BABE003F7DB3 /* FetchedObjects.swift in Sources */,
+				EF3FB2D62B86BAC2003F7DB3 /* Persistence.swift in Sources */,
+				EF3FB2DD2B87F129003F7DB3 /* ExampleDatabase.xcdatamodeld in Sources */,
 				EF63334C2B8406CD0006174A /* UserProfile.swift in Sources */,
+				EF3FB2DA2B86BB70003F7DB3 /* MenuItem.swift in Sources */,
 				EFE1F7432B7FE5A1003008CF /* Home.swift in Sources */,
 				EF6500A02B61C5A0005FADF5 /* LittleLemonAppApp.swift in Sources */,
 			);
@@ -356,6 +376,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF3FB2DB2B87F129003F7DB3 /* ExampleDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF3FB2DC2B87F129003F7DB3 /* ExampleDatabase.xcdatamodel */,
+			);
+			currentVersion = EF3FB2DC2B87F129003F7DB3 /* ExampleDatabase.xcdatamodel */;
+			path = ExampleDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EF6500942B61C5A0005FADF5 /* Project object */;
 }
