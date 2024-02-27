@@ -12,6 +12,7 @@ struct Menu: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     @State private var isDataLoaded = false // Track if data is loaded
+    @State private var searchText = ""
     
     var body: some View {
         VStack {
@@ -30,7 +31,8 @@ struct Menu: View {
                 .padding(.bottom, 20)
             
             List {
-                FetchedObjects { (dishes: [Dish]) in
+                TextField("Search menu", text: $searchText)
+                FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
                     ForEach(dishes) { dish in
                         HStack {
                             if let imageUrlString = dish.image,
@@ -58,7 +60,7 @@ struct Menu: View {
                             }
                             
                             VStack(alignment: .leading) {
-                                Text("\(dish.title ?? "") - \(dish.price ?? "")")
+                                Text("\(dish.title ?? "") - \"$\(dish.price ?? "")\"")
                                     .font(.headline)
                                 
                                 Text(dish.category ?? "")
@@ -70,7 +72,7 @@ struct Menu: View {
                     }
                 }
             }
-            .listStyle(InsetGroupedListStyle()) // Stylizacja listy
+            .listStyle(InsetGroupedListStyle()) // List style
             
         }
         .padding()
@@ -80,6 +82,22 @@ struct Menu: View {
             }
         }
     }
+    
+    func buildPredicate() -> NSPredicate {
+        if searchText.isEmpty {
+            return NSPredicate(value: true)
+        } else {
+            return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
+        }
+    }
+    
+    func buildSortDescriptors() -> [NSSortDescriptor]  {
+        return [NSSortDescriptor(key: "title",
+                                ascending: true,
+                                 selector: #selector(NSString.localizedStandardCompare))]
+    }
+        
+    
     
     // Funkcja pobierająca dane z menu
     func getMenuData() {
