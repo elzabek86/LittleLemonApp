@@ -14,24 +14,39 @@ struct Menu: View {
     @State private var isDataLoaded = false // Track if data is loaded
     @State private var searchText = ""
     
+    
+    //Colors
+    let yellowColor = (Color(red: 244 / 255, green: 206 / 255, blue: 20 / 255))
+    let greenColor = (Color(red: 73 / 255, green: 94 / 255, blue: 87 / 255))
+    
     var body: some View {
         VStack {
-            Text("Little Lemon")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.bottom, 10)
-            
-            Text("Chicago")
-                .font(.title)
-                .foregroundColor(.gray)
-            
-            Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 20)
-                .padding(.bottom, 20)
-            
-            List {
+            VStack {
+                Text("Little Lemon")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.bottom, 10)
+                    .foregroundColor(yellowColor)
+                
+                Text("Chicago")
+                    .font(.title)
+                    .foregroundColor(.white)
+                
+                Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 20)
+                    .foregroundColor(.white)
+                
                 TextField("Search menu", text: $searchText)
+                    .background(.white)
+
+            }
+            .background(greenColor)
+            
+        
+            List {
+                
                 FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
                     ForEach(dishes) { dish in
                         HStack {
