@@ -15,8 +15,6 @@
 		EF029C552B966EE300C3F6DB /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF029C542B966EE300C3F6DB /* MainScreen.swift */; };
 		EF029C572B966EE800C3F6DB /* DetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF029C562B966EE800C3F6DB /* DetailItem.swift */; };
 		EF029C592B966EF000C3F6DB /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF029C582B966EF000C3F6DB /* Styles.swift */; };
-		EF029C842B97C60400C3F6DB /* Karla-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF029C832B97C60400C3F6DB /* Karla-VariableFont_wght.ttf */; };
-		EF029C862B97C6E800C3F6DB /* MarkaziText-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF029C852B97C6E800C3F6DB /* MarkaziText-VariableFont_wght.ttf */; };
 		EF029C882B97C81B00C3F6DB /* Faustina-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF029C872B97C81B00C3F6DB /* Faustina-VariableFont_wght.ttf */; };
 		EF3FB2D42B86BABE003F7DB3 /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3FB2D32B86BABE003F7DB3 /* FetchedObjects.swift */; };
 		EF3FB2D62B86BAC2003F7DB3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3FB2D52B86BAC2003F7DB3 /* Persistence.swift */; };
@@ -41,8 +39,6 @@
 		EF029C562B966EE800C3F6DB /* DetailItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailItem.swift; sourceTree = "<group>"; };
 		EF029C582B966EF000C3F6DB /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		EF029C5F2B967C6900C3F6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		EF029C832B97C60400C3F6DB /* Karla-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Karla-VariableFont_wght.ttf"; path = "../../../../../../Downloads/Karla,Markazi_Text/Karla/Karla-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		EF029C852B97C6E800C3F6DB /* MarkaziText-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MarkaziText-VariableFont_wght.ttf"; path = "../../../../../../Downloads/Markazi_Text/MarkaziText-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		EF029C872B97C81B00C3F6DB /* Faustina-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Faustina-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		EF3FB2D32B86BABE003F7DB3 /* FetchedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
 		EF3FB2D52B86BAC2003F7DB3 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -108,8 +104,6 @@
 		EF029C5A2B967BB700C3F6DB /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				EF029C832B97C60400C3F6DB /* Karla-VariableFont_wght.ttf */,
-				EF029C852B97C6E800C3F6DB /* MarkaziText-VariableFont_wght.ttf */,
 				EF029C872B97C81B00C3F6DB /* Faustina-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
@@ -213,9 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF029C862B97C6E800C3F6DB /* MarkaziText-VariableFont_wght.ttf in Resources */,
 				EF6500A72B61C5A2005FADF5 /* Preview Assets.xcassets in Resources */,
-				EF029C842B97C60400C3F6DB /* Karla-VariableFont_wght.ttf in Resources */,
 				EF6500A42B61C5A2005FADF5 /* Assets.xcassets in Resources */,
 				EF029C882B97C81B00C3F6DB /* Faustina-VariableFont_wght.ttf in Resources */,
 			);
