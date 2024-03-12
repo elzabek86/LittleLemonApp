@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF029C4B2B966D6B00C3F6DB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF029C4A2B966D6B00C3F6DB /* ViewModel.swift */; };
+		EF029C4D2B966E3300C3F6DB /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF029C4C2B966E3300C3F6DB /* Onboarding.swift */; };
+		EF029C4F2B966EC400C3F6DB /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF029C4E2B966EC400C3F6DB /* Hero.swift */; };
+		EF029C512B966ED000C3F6DB /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF029C502B966ED000C3F6DB /* Header.swift */; };
+		EF029C532B966EDC00C3F6DB /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF029C522B966EDC00C3F6DB /* FoodItem.swift */; };
+		EF029C552B966EE300C3F6DB /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF029C542B966EE300C3F6DB /* MainScreen.swift */; };
+		EF029C572B966EE800C3F6DB /* DetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF029C562B966EE800C3F6DB /* DetailItem.swift */; };
+		EF029C592B966EF000C3F6DB /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF029C582B966EF000C3F6DB /* Styles.swift */; };
+		EF029C842B97C60400C3F6DB /* Karla-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF029C832B97C60400C3F6DB /* Karla-VariableFont_wght.ttf */; };
+		EF029C862B97C6E800C3F6DB /* MarkaziText-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF029C852B97C6E800C3F6DB /* MarkaziText-VariableFont_wght.ttf */; };
+		EF029C882B97C81B00C3F6DB /* Faustina-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF029C872B97C81B00C3F6DB /* Faustina-VariableFont_wght.ttf */; };
 		EF3FB2D42B86BABE003F7DB3 /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3FB2D32B86BABE003F7DB3 /* FetchedObjects.swift */; };
 		EF3FB2D62B86BAC2003F7DB3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3FB2D52B86BAC2003F7DB3 /* Persistence.swift */; };
 		EF3FB2D82B86BB66003F7DB3 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3FB2D72B86BB66003F7DB3 /* MenuList.swift */; };
@@ -16,12 +27,23 @@
 		EF6500A02B61C5A0005FADF5 /* LittleLemonAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65009F2B61C5A0005FADF5 /* LittleLemonAppApp.swift */; };
 		EF6500A42B61C5A2005FADF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6500A32B61C5A2005FADF5 /* Assets.xcassets */; };
 		EF6500A72B61C5A2005FADF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6500A62B61C5A2005FADF5 /* Preview Assets.xcassets */; };
-		EFE1F73F2B7FE58F003008CF /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1F73E2B7FE58F003008CF /* Onboarding.swift */; };
 		EFE1F7412B7FE59C003008CF /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1F7402B7FE59C003008CF /* Menu.swift */; };
 		EFE1F7432B7FE5A1003008CF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1F7422B7FE5A1003008CF /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF029C4A2B966D6B00C3F6DB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		EF029C4C2B966E3300C3F6DB /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		EF029C4E2B966EC400C3F6DB /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		EF029C502B966ED000C3F6DB /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		EF029C522B966EDC00C3F6DB /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		EF029C542B966EE300C3F6DB /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		EF029C562B966EE800C3F6DB /* DetailItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailItem.swift; sourceTree = "<group>"; };
+		EF029C582B966EF000C3F6DB /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		EF029C5F2B967C6900C3F6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EF029C832B97C60400C3F6DB /* Karla-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Karla-VariableFont_wght.ttf"; path = "../../../../../../Downloads/Karla,Markazi_Text/Karla/Karla-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		EF029C852B97C6E800C3F6DB /* MarkaziText-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MarkaziText-VariableFont_wght.ttf"; path = "../../../../../../Downloads/Markazi_Text/MarkaziText-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		EF029C872B97C81B00C3F6DB /* Faustina-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Faustina-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		EF3FB2D32B86BABE003F7DB3 /* FetchedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
 		EF3FB2D52B86BAC2003F7DB3 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		EF3FB2D72B86BB66003F7DB3 /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
@@ -32,7 +54,6 @@
 		EF65009F2B61C5A0005FADF5 /* LittleLemonAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonAppApp.swift; sourceTree = "<group>"; };
 		EF6500A32B61C5A2005FADF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF6500A62B61C5A2005FADF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EFE1F73E2B7FE58F003008CF /* Onboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Onboarding.swift; path = LittleLemonApp/Onboarding.swift; sourceTree = SOURCE_ROOT; };
 		EFE1F7402B7FE59C003008CF /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		EFE1F7422B7FE5A1003008CF /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +69,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF029C472B966CD200C3F6DB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EF3FB2D32B86BABE003F7DB3 /* FetchedObjects.swift */,
+				EF3FB2D52B86BAC2003F7DB3 /* Persistence.swift */,
+				EF3FB2DB2B87F129003F7DB3 /* ExampleDatabase.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EF029C482B966CEC00C3F6DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF3FB2D72B86BB66003F7DB3 /* MenuList.swift */,
+				EF3FB2D92B86BB70003F7DB3 /* MenuItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF029C492B966D0E00C3F6DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1F7422B7FE5A1003008CF /* Home.swift */,
+				EFE1F7402B7FE59C003008CF /* Menu.swift */,
+				EF029C4C2B966E3300C3F6DB /* Onboarding.swift */,
+				EF63334B2B8406CD0006174A /* UserProfile.swift */,
+				EF029C4E2B966EC400C3F6DB /* Hero.swift */,
+				EF029C502B966ED000C3F6DB /* Header.swift */,
+				EF029C522B966EDC00C3F6DB /* FoodItem.swift */,
+				EF029C542B966EE300C3F6DB /* MainScreen.swift */,
+				EF029C4A2B966D6B00C3F6DB /* ViewModel.swift */,
+				EF029C562B966EE800C3F6DB /* DetailItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF029C5A2B967BB700C3F6DB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EF029C832B97C60400C3F6DB /* Karla-VariableFont_wght.ttf */,
+				EF029C852B97C6E800C3F6DB /* MarkaziText-VariableFont_wght.ttf */,
+				EF029C872B97C81B00C3F6DB /* Faustina-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		EF6500932B61C5A0005FADF5 = {
 			isa = PBXGroup;
 			children = (
@@ -67,17 +134,14 @@
 		EF65009E2B61C5A0005FADF5 /* LittleLemonApp */ = {
 			isa = PBXGroup;
 			children = (
-				EFE1F7422B7FE5A1003008CF /* Home.swift */,
-				EFE1F7402B7FE59C003008CF /* Menu.swift */,
-				EFE1F73E2B7FE58F003008CF /* Onboarding.swift */,
-				EF63334B2B8406CD0006174A /* UserProfile.swift */,
+				EF029C5F2B967C6900C3F6DB /* Info.plist */,
+				EF029C492B966D0E00C3F6DB /* Views */,
 				EF65009F2B61C5A0005FADF5 /* LittleLemonAppApp.swift */,
-				EF3FB2D72B86BB66003F7DB3 /* MenuList.swift */,
-				EF3FB2D92B86BB70003F7DB3 /* MenuItem.swift */,
-				EF3FB2D32B86BABE003F7DB3 /* FetchedObjects.swift */,
-				EF3FB2D52B86BAC2003F7DB3 /* Persistence.swift */,
-				EF3FB2DB2B87F129003F7DB3 /* ExampleDatabase.xcdatamodeld */,
+				EF029C582B966EF000C3F6DB /* Styles.swift */,
+				EF029C482B966CEC00C3F6DB /* Model */,
+				EF029C472B966CD200C3F6DB /* CoreData */,
 				EF6500A32B61C5A2005FADF5 /* Assets.xcassets */,
+				EF029C5A2B967BB700C3F6DB /* Fonts */,
 				EF6500A52B61C5A2005FADF5 /* Preview Content */,
 			);
 			path = LittleLemonApp;
@@ -149,8 +213,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF029C862B97C6E800C3F6DB /* MarkaziText-VariableFont_wght.ttf in Resources */,
 				EF6500A72B61C5A2005FADF5 /* Preview Assets.xcassets in Resources */,
+				EF029C842B97C60400C3F6DB /* Karla-VariableFont_wght.ttf in Resources */,
 				EF6500A42B61C5A2005FADF5 /* Assets.xcassets in Resources */,
+				EF029C882B97C81B00C3F6DB /* Faustina-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,16 +228,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF029C532B966EDC00C3F6DB /* FoodItem.swift in Sources */,
 				EFE1F7412B7FE59C003008CF /* Menu.swift in Sources */,
-				EFE1F73F2B7FE58F003008CF /* Onboarding.swift in Sources */,
+				EF029C512B966ED000C3F6DB /* Header.swift in Sources */,
 				EF3FB2D82B86BB66003F7DB3 /* MenuList.swift in Sources */,
+				EF029C4B2B966D6B00C3F6DB /* ViewModel.swift in Sources */,
 				EF3FB2D42B86BABE003F7DB3 /* FetchedObjects.swift in Sources */,
 				EF3FB2D62B86BAC2003F7DB3 /* Persistence.swift in Sources */,
+				EF029C4D2B966E3300C3F6DB /* Onboarding.swift in Sources */,
 				EF3FB2DD2B87F129003F7DB3 /* ExampleDatabase.xcdatamodeld in Sources */,
 				EF63334C2B8406CD0006174A /* UserProfile.swift in Sources */,
 				EF3FB2DA2B86BB70003F7DB3 /* MenuItem.swift in Sources */,
 				EFE1F7432B7FE5A1003008CF /* Home.swift in Sources */,
+				EF029C592B966EF000C3F6DB /* Styles.swift in Sources */,
+				EF029C552B966EE300C3F6DB /* MainScreen.swift in Sources */,
+				EF029C572B966EE800C3F6DB /* DetailItem.swift in Sources */,
 				EF6500A02B61C5A0005FADF5 /* LittleLemonAppApp.swift in Sources */,
+				EF029C4F2B966EC400C3F6DB /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,11 +381,15 @@
 				DEVELOPMENT_TEAM = GTU957UJKB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LittleLemonApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Little Lemon";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,11 +414,15 @@
 				DEVELOPMENT_TEAM = GTU957UJKB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LittleLemonApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Little Lemon";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

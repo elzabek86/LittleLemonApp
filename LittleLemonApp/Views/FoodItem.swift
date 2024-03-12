@@ -1,8 +1,8 @@
 //
-//  FoodItem.swift
+//  MenuList.swift
 //  LittleLemonApp
 //
-//  Created by Matheus Ferreira on 21.03.2023.
+//  Created by Jarek  on 21/02/2024.
 //
 
 import SwiftUI

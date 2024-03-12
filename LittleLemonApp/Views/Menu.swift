@@ -11,159 +11,108 @@ import CoreData
 struct Menu: View {
     
     @Environment(\.managedObjectContext) private var viewContext
-    @State private var isDataLoaded = false // Track if data is loaded
-    @State private var searchText = ""
     
+    @State var startersIsEnabled = true
+    @State var mainsIsEnabled = true
+    @State var dessertsIsEnabled = true
+    @State var drinksIsEnabled = true
     
-    //Colors
-    let yellowColor = (Color(red: 244 / 255, green: 206 / 255, blue: 20 / 255))
-    let greenColor = (Color(red: 73 / 255, green: 94 / 255, blue: 87 / 255))
+    @State var searchText = ""
+    
+    @State var loaded = false
+    
+    @State var isKeyboardVisible = false
+    
+    init() {
+        UITextField.appearance().clearButtonMode = .whileEditing
+    }
     
     var body: some View {
-        VStack {
+        NavigationView {
             VStack {
-                Text("Little Lemon")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.bottom, 10)
-                    .foregroundColor(yellowColor)
-                
-                Text("Chicago")
-                    .font(.title)
-                    .foregroundColor(.white)
-                
-                Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 20)
-                    .foregroundColor(.white)
-                
-                TextField("Search menu", text: $searchText)
-                    .background(.white)
-
-            }
-            .background(greenColor)
-            
-        
-            List {
-                
-                FetchedObjects(predicate: buildPredicate(), sortDescriptors: buildSortDescriptors()) { (dishes: [Dish]) in
-                    ForEach(dishes) { dish in
-                        HStack {
-                            if let imageUrlString = dish.image,
-                               let imageUrl = URL(string: imageUrlString) {
-                                AsyncImage(url: imageUrl) { phase in
-                                    switch phase {
-                                    case .empty:
-                                        ProgressView()
-                                    case .success(let image):
-                                        image
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit) // Zachowanie proporcji obrazu
-                                            .frame(width: 100, height: 100)
-                                            .padding(.trailing, 10)
-                                    case .failure:
-                                        Image(systemName: "photo")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit) // Zachowanie proporcji obrazu
-                                            .frame(width: 50, height: 50)
-                                            .padding(.trailing, 10)
-                                    @unknown default:
-                                        EmptyView()
-                                    }
-                                }
-                            }
-                            
-                            VStack(alignment: .leading) {
-                                Text("\(dish.title ?? "") - \"$\(dish.price ?? "")\"")
-                                    .font(.headline)
-                                
-                                Text(dish.category ?? "")
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
-                            }
+                VStack {
+                    if !isKeyboardVisible {
+                        withAnimation() {
+                            Hero()
+                                .frame(maxHeight: 180)
                         }
-                        .padding(.vertical, 5)
+                        .padding(.bottom)
                     }
+                    
+                    TextField("Search menu", text: $searchText)
+                        .textFieldStyle(.roundedBorder)
+                }
+                .padding()
+                .background(Color.primaryColor1)
+                
+                Text("ORDER FOR DELIVERY!")
+                    .font(.sectionTitle())
+                    .foregroundColor(.highlightColor2)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top)
+                    .padding(.leading)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        Toggle("Starters", isOn: $startersIsEnabled)
+                        Toggle("Mains", isOn: $mainsIsEnabled)
+                        Toggle("Desserts", isOn: $dessertsIsEnabled)
+                        Toggle("Drinks", isOn: $drinksIsEnabled)
+                    }
+                    .toggleStyle(MyToggleStyle())
+                    .padding(.horizontal)
+                }
+                FetchedObjects(predicate: buildPredicate(),
+                               sortDescriptors: buildSortDescriptors()) {
+                    (dishes: [Dish]) in
+                    List(dishes) { dish in
+                        NavigationLink(destination: DetailItem(dish: dish)) {
+                            FoodItem(dish: dish)
+                        }
+                    }
+                    .listStyle(.plain)
                 }
             }
-            .listStyle(InsetGroupedListStyle()) // List style
-            
         }
-        .padding()
         .onAppear {
-            if !isDataLoaded { // Fetch data only if not loaded before
-                getMenuData()
+            if !loaded {
+                MenuList.getMenuData(viewContext: viewContext)
+                loaded = true
             }
         }
-    }
-    
-    func buildPredicate() -> NSPredicate {
-        if searchText.isEmpty {
-            return NSPredicate(value: true)
-        } else {
-            return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
-        }
-    }
-    
-    func buildSortDescriptors() -> [NSSortDescriptor]  {
-        return [NSSortDescriptor(key: "title",
-                                ascending: true,
-                                 selector: #selector(NSString.localizedStandardCompare))]
-    }
-        
-    
-    
-    // Funkcja pobierająca dane z menu
-    func getMenuData() {
-        PersistenceController.shared.clear()
-        
-        let menuAddress = "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/menu.json"
-        
-        guard let menuURL = URL(string: menuAddress) else {
-            print("Invalid URL")
-            return
-        }
-        
-        let request = URLRequest(url: menuURL)
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
-                print("Error fetching menu data: \(error)")
-                return
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { notification in
+            withAnimation {
+                self.isKeyboardVisible = true
             }
             
-            if let data = data {
-                do {
-                    let decoder = JSONDecoder()
-                    if let finalObject = try? decoder.decode(MenuList.self, from: data) {
-                        // Check if dish already exists before adding
-                        let existingDishes = try viewContext.fetch(Dish.fetchRequest()) as! [Dish]
-                        for menuItem in finalObject.menu {
-                            if !existingDishes.contains(where: { $0.title == menuItem.title }) {
-                                let dish = Dish(context: viewContext)
-                                dish.title = menuItem.title
-                                dish.image = menuItem.image
-                                dish.price = menuItem.price
-                                dish.category = menuItem.category
-                            }
-                        }
-                        try viewContext.save()
-                        isDataLoaded = true // Update state to mark data as loaded
-                    } else {
-                        print("Error decoding menu data")
-                    }
-                } catch {
-                    print("Error decoding menu data: \(error)")
-                }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { notification in
+            withAnimation {
+                self.isKeyboardVisible = false
             }
         }
-        task.resume()
+    }
+    
+    func buildSortDescriptors() -> [NSSortDescriptor] {
+        return [NSSortDescriptor(key: "title",
+                                  ascending: true,
+                                  selector:
+                                    #selector(NSString.localizedStandardCompare))]
+    }
+    
+    func buildPredicate() -> NSCompoundPredicate {
+        let search = searchText == "" ? NSPredicate(value: true) : NSPredicate(format: "title CONTAINS[cd] %@", searchText)
+        let starters = !startersIsEnabled ? NSPredicate(format: "category != %@", "starters") : NSPredicate(value: true)
+        let mains = !mainsIsEnabled ? NSPredicate(format: "category != %@", "mains") : NSPredicate(value: true)
+        let desserts = !dessertsIsEnabled ? NSPredicate(format: "category != %@", "desserts") : NSPredicate(value: true)
+        let drinks = !drinksIsEnabled ? NSPredicate(format: "category != %@", "drinks") : NSPredicate(value: true)
+
+        let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [search, starters, mains, desserts, drinks])
+        return compoundPredicate
     }
 }
 
-    
-
-#Preview {
-    Menu()
+struct Menu_Previews: PreviewProvider {
+    static var previews: some View {
+        Menu().environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+    }
 }

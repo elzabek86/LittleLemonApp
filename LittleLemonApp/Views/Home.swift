@@ -9,20 +9,14 @@ import SwiftUI
 
 struct Home: View {
     
-    let persistence =  PersistenceController()
-    
     var body: some View {
-        TabView {
-            Menu()
-                .environment(\.managedObjectContext, persistence.container.viewContext)
-                .tabItem { Label ("Menu", systemImage: "list.dash")}
-            UserProfile()
-                .tabItem { Label ("Profile", systemImage: "square.and.pencil") }
-        }
-        .navigationBarBackButtonHidden(true)
+        MainScreen()
+            .navigationBarBackButtonHidden()
     }
 }
 
-#Preview {
-    Home()
+struct Home_Previews: PreviewProvider {
+    static var previews: some View {
+        Home().environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+    }
 }

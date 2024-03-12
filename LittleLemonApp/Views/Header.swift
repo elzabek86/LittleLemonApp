@@ -1,8 +1,8 @@
 //
-//  HeaderBar.swift
+//  MenuList.swift
 //  LittleLemonApp
 //
-//  Created by Matheus Ferreira on 19.03.2023.
+//  Created by Jarek  on 21/02/2024.
 //
 
 import SwiftUI
@@ -14,7 +14,7 @@ struct Header: View {
         NavigationStack {
             VStack {
                 ZStack {
-                    Image("logo")
+                    Image("Logo")
                     HStack {
                         Spacer()
                         if isLoggedIn {

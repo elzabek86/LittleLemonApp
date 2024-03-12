@@ -1,8 +1,8 @@
 //
-//  DetailItem.swift
+//  MenuList.swift
 //  LittleLemonApp
 //
-//  Created by Matheus Ferreira on 24.03.2023.
+//  Created by Jarek  on 21/02/2024.
 //
 
 import SwiftUI
@@ -14,7 +14,12 @@ struct DetailItem: View {
     let dish: Dish
     
     var body: some View {
+        VStack {
+            
+        }
+        Spacer()
         ScrollView {
+            
             AsyncImage(url: URL(string: dish.image ?? "")) { image in
                 image
                     .resizable()
@@ -29,16 +34,17 @@ struct DetailItem: View {
                 .foregroundColor(.primaryColor1)
             Spacer(minLength: 20)
             Text(dish.descriptionDish ?? "")
-                .font(.regularText())
+                .font(.leadText())
             Spacer(minLength: 10)
             Text("$" + (dish.price ?? ""))
-                .font(.highlightText())
+                .font(.leadText())
                 .foregroundColor(.primaryColor1)
                 .monospaced()
             Spacer()
         }
         .frame(maxWidth: .infinity)
         .ignoresSafeArea()
+        
     }
 }
 

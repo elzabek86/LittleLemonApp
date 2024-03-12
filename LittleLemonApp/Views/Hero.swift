@@ -1,8 +1,8 @@
 //
-//  Hero.swift
+//  MenuList.swift
 //  LittleLemonApp
 //
-//  Created by Matheus Ferreira on 19.03.2023.
+//  Created by Jarek  on 21/02/2024.
 //
 
 import SwiftUI
@@ -21,7 +21,7 @@ struct Hero: View {
                         .foregroundColor(.white)
                         .font(.subTitleFont())
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Spacer(minLength: 5)
+                    Spacer(minLength: 10)
                     Text("""
                      We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                      """)

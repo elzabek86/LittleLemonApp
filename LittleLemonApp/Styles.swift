@@ -1,8 +1,8 @@
 //
-//  LittleLemonButtonStyle.swift
+//  MenuList.swift
 //  LittleLemonApp
 //
-//  Created by Matheus Ferreira on 18.03.2023.
+//  Created by Jarek  on 24/02/2024.
 //
 
 import SwiftUI
@@ -74,6 +74,7 @@ struct MyToggleStyle: ToggleStyle {
             }
         }
         .foregroundColor(Color.primaryColor1)
+        .font(.custom("Karla", size: 15).weight(.bold))
         .padding(5)
         .background {
             if configuration.isOn {
@@ -89,17 +90,17 @@ extension Text {
         self
             .frame(maxWidth: .infinity, alignment: .leading)
             .foregroundColor(Color.primaryColor1)
-            .font(.custom("Karla-Bold", size: 13))
+            .font(.custom("Karla-Bold", size: 14))
     }
 }
 
 extension Font {
     static func displayFont() -> Font {
-        return Font.custom("Markazi Text", size: 42).weight(.medium)
+        return Font.custom("Faustina", size: 42).weight(.medium)
     }
     
     static func subTitleFont() -> Font {
-        return Font.custom("Markazi Text", size: 32)
+        return Font.custom("Faustina", size: 32)
     }
     
     static func leadText() -> Font {
@@ -107,7 +108,7 @@ extension Font {
     }
     
     static func regularText() -> Font {
-        return Font.custom("Markazi Text", size: 18)
+        return Font.custom("Faustina", size: 18)
     }
     
     static func sectionTitle() -> Font {
